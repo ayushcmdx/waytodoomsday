@@ -1,0 +1,54 @@
+---
+import Layout from "../layouts/Layout.astro";
+import CountdownTimer from "../components/CountdownTimer.jsx";
+import SectionVideo from "../components/SectionVideo.jsx";
+import App from "../components/App.jsx";
+
+// Hero gets its own single looping video.
+const HERO_PLAYLIST = ["/bg/doomsday.mp4"];
+
+// Timeline/main section gets its own separate playlist — add more
+// clips here any time, they'll play in order and loop back to the first.
+const TIMELINE_PLAYLIST = [
+  "/bg/doomsday-1.mp4",
+  "/bg/doomsday-2.mp4",
+  "/bg/doomsday-3.mp4",
+];
+---
+
+<Layout>
+  <!-- HERO — its own video, doomsday.mp4 -->
+  <section class="relative min-h-[70vh] flex flex-col items-center justify-center overflow-hidden border-b border-white/5">
+    <SectionVideo client:load playlist={HERO_PLAYLIST} />
+
+    <div class="relative z-10 flex flex-col items-center gap-8 px-4 text-center">
+      <p class="font-display text-3xl sm:text-5xl tracking-widest text-white">
+        MARVEL <span class="text-accent">STUDIOS</span>
+      </p>
+      <h1 class="font-display text-4xl sm:text-6xl tracking-wide leading-none">
+        WAY TO <span class="text-accent">DOOMSDAY</span>
+      </h1>
+      <p class="text-muted max-w-md text-sm sm:text-base">
+        Every MCU movie and series, in order, before Avengers: Doomsday hits theaters.
+      </p>
+
+      <div class="flex flex-col items-center gap-2 mt-2">
+        <span class="text-xs uppercase tracking-widest text-muted">Countdown to release</span>
+        <CountdownTimer client:load />
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE / APP — its own separate video, doomsday-1.mp4 (or a playlist) -->
+  <section class="relative overflow-hidden">
+    <SectionVideo client:load playlist={TIMELINE_PLAYLIST} />
+
+    <main class="relative z-10 pt-10">
+      <App client:load />
+    </main>
+  </section>
+
+  <footer class="relative z-10 text-center py-8 text-xs text-muted/60 border-t border-white/5 bg-bg">
+    Way to Doomsday — an unofficial fan project. Not affiliated with Marvel Studios or Disney.
+  </footer>
+</Layout>
