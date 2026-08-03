@@ -1,13 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 
-// Add/remove entries here to match however many clips you have (5-7 is fine).
+// Add/remove entries here to match however many clips you have.
 // Files live in /public/bg/, so the path is just "/bg/filename.mp4".
 const CLIPS = [
+  "/bg/doomsday.mp4",
   "/bg/doomsday-1.mp4",
-  "/bg/doomsday-2.mp4",
-  "/bg/doomsday-3.mp4",
-  "/bg/doomsday-4.mp4",
-  "/bg/doomsday-5.mp4",
 ];
 
 export default function HeroBackground() {
@@ -16,6 +13,11 @@ export default function HeroBackground() {
 
   // advance to the next clip when the current one finishes
   const handleEnded = () => {
+    setIndex((i) => (i + 1) % CLIPS.length);
+  };
+
+  // If a clip fails to load, skip to the next one instead of freezing
+  const handleError = () => {
     setIndex((i) => (i + 1) % CLIPS.length);
   };
 
@@ -38,6 +40,7 @@ export default function HeroBackground() {
         muted
         playsInline
         onEnded={handleEnded}
+        onError={handleError}
         aria-hidden="true"
       >
         <source src={CLIPS[index]} type="video/mp4" />

@@ -1,14 +1,16 @@
 import { useEffect, useMemo, useState } from "react";
+import { motion } from "framer-motion";
 import movies from "../data/movies.json";
 import MovieCard from "./MovieCard.jsx";
 import ProgressBar from "./ProgressBar.jsx";
 
 const STORAGE_KEY = "waytodoomsday:watched";
+const VIEW_STORAGE_KEY = "waytodoomsday:view";
+const SORT_STORAGE_KEY = "waytodoomsday:sortMode";
 const FILTERS = [
   { key: "all", label: "All" },
   { key: "movie", label: "Movies" },
   { key: "series", label: "Series" },
-  { key: "special", label: "Special" },
 ];
 
 function loadWatched() {
@@ -20,16 +22,45 @@ function loadWatched() {
   }
 }
 
+function loadView() {
+  if (typeof window === "undefined") return "timeline";
+  const saved = window.localStorage.getItem(VIEW_STORAGE_KEY);
+  return saved === "grid" || saved === "timeline" ? saved : "timeline";
+}
+
+function loadSortMode() {
+  if (typeof window === "undefined") return "story";
+  const saved = window.localStorage.getItem(SORT_STORAGE_KEY);
+  return saved === "story" || saved === "release" ? saved : "story";
+}
+
 export default function App() {
   const [query, setQuery] = useState("");
   const [typeFilter, setTypeFilter] = useState("all");
   const [view, setView] = useState("timeline"); // "timeline" | "grid"
+  const [sortMode, setSortMode] = useState("story"); // "story" | "release"
   const [watchedMap, setWatchedMap] = useState({});
+  const [hydrated, setHydrated] = useState(false);
 
-  // Load persisted watched state on mount (client-only)
+  // Load persisted view/sort/watched state on mount (client-only)
   useEffect(() => {
     setWatchedMap(loadWatched());
+    setView(loadView());
+    setSortMode(loadSortMode());
+    setHydrated(true);
   }, []);
+
+  // Persist view + sortMode whenever they change (skip until after initial load,
+  // otherwise the default values would overwrite what was just read from storage)
+  useEffect(() => {
+    if (!hydrated) return;
+    window.localStorage.setItem(VIEW_STORAGE_KEY, view);
+  }, [view, hydrated]);
+
+  useEffect(() => {
+    if (!hydrated) return;
+    window.localStorage.setItem(SORT_STORAGE_KEY, sortMode);
+  }, [sortMode, hydrated]);
 
   const toggleWatched = (id) => {
     setWatchedMap((prev) => {
@@ -39,10 +70,10 @@ export default function App() {
     });
   };
 
-  const sorted = useMemo(
-    () => [...movies].sort((a, b) => a.chronologicalYear - b.chronologicalYear),
-    []
-  );
+  const sorted = useMemo(() => {
+    const key = sortMode === "story" ? "chronologicalYear" : "year";
+    return [...movies].sort((a, b) => a[key] - b[key]);
+  }, [sortMode]);
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -61,65 +92,111 @@ export default function App() {
 
   return (
     <div className="w-full">
-      {/* Controls row */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 flex flex-wrap items-center gap-3 justify-between mb-4">
-        <div className="flex items-center gap-3 flex-wrap flex-1 min-w-[260px]">
-          <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md rounded-xl px-3 py-2 min-w-[260px] flex-1 max-w-sm shadow-inner shadow-black/40">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-muted shrink-0">
-              <path d="M21 21l-4.35-4.35" />
-              <circle cx="11" cy="11" r="6" />
-            </svg>
-            <input
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              placeholder="Search title, year, cast..."
-              aria-label="Search timeline"
-              className="bg-transparent outline-none text-sm w-full placeholder:text-muted/70"
-            />
+      {/* Controls row — glass panel */}
+      <div className="sticky top-3 z-30 max-w-6xl mx-auto px-4 sm:px-6 mb-4">
+        <div className="flex flex-wrap items-center gap-3 justify-between rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl shadow-lg shadow-black/40 px-3 py-3">
+          <div className="flex items-center gap-3 flex-wrap flex-1 min-w-[260px]">
+            <div className="flex items-center gap-2 bg-white/10 rounded-xl px-3 py-2 min-w-[260px] flex-1 max-w-sm shadow-inner shadow-black/40">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-muted shrink-0">
+                <path d="M21 21l-4.35-4.35" />
+                <circle cx="11" cy="11" r="6" />
+              </svg>
+              <input
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                placeholder="Search title, year, cast..."
+                aria-label="Search timeline"
+                className="bg-transparent outline-none text-sm w-full placeholder:text-muted/70"
+              />
+            </div>
+
+            <div className="relative flex items-center gap-1 flex-wrap" role="list" aria-label="Type filters">
+              {FILTERS.map((f) => (
+                <button
+                  key={f.key}
+                  onClick={() => setTypeFilter(f.key)}
+                  className={`relative text-xs font-bold uppercase tracking-wide px-3 py-2 rounded-full transition-colors ${
+                    typeFilter === f.key ? "text-white" : "text-muted hover:text-white"
+                  }`}
+                >
+                  {typeFilter === f.key && (
+                    <motion.span
+                      layoutId="filter-pill"
+                      transition={{ type: "spring", stiffness: 400, damping: 32 }}
+                      className="absolute inset-0 rounded-full bg-accent shadow shadow-accent/30"
+                    />
+                  )}
+                  <span className="relative">{f.label}</span>
+                </button>
+              ))}
+            </div>
           </div>
 
-          <div className="flex items-center gap-2 flex-wrap" role="list" aria-label="Type filters">
-            {FILTERS.map((f) => (
+          <div className="relative flex items-center gap-1 bg-white/10 rounded-xl p-1">
+            {["story", "release"].map((s) => (
               <button
-                key={f.key}
-                onClick={() => setTypeFilter(f.key)}
-                className={`text-xs font-bold uppercase tracking-wide px-3 py-2 rounded-full border transition-colors ${
-                  typeFilter === f.key
-                    ? "bg-accent text-white border-transparent shadow shadow-accent/30"
-                    : "bg-transparent text-muted border-white/10 hover:border-white/30 hover:text-white"
+                key={s}
+                onClick={() => setSortMode(s)}
+                aria-pressed={sortMode === s}
+                title={
+                  s === "story"
+                    ? "Sort by MCU in-universe chronology"
+                    : "Sort by real-world theatrical release date"
+                }
+                className={`relative px-3 py-2 rounded-lg text-xs font-bold uppercase tracking-wide transition-colors ${
+                  sortMode === s ? "text-white" : "text-muted hover:text-white"
                 }`}
               >
-                {f.label}
+                {sortMode === s && (
+                  <motion.span
+                    layoutId="sort-pill"
+                    transition={{ type: "spring", stiffness: 400, damping: 32 }}
+                    className="absolute inset-0 rounded-lg bg-accent"
+                  />
+                )}
+                <span className="relative">{s === "story" ? "Story Order" : "Release Order"}</span>
+              </button>
+            ))}
+          </div>
+
+          <div className="relative flex items-center gap-1 bg-white/10 rounded-xl p-1">
+            {["timeline", "grid"].map((v) => (
+              <button
+                key={v}
+                onClick={() => setView(v)}
+                aria-pressed={view === v}
+                className={`relative px-3 py-2 rounded-lg text-xs font-bold uppercase tracking-wide transition-colors ${
+                  view === v ? "text-white" : "text-muted hover:text-white"
+                }`}
+              >
+                {view === v && (
+                  <motion.span
+                    layoutId="view-pill"
+                    transition={{ type: "spring", stiffness: 400, damping: 32 }}
+                    className="absolute inset-0 rounded-lg bg-accent"
+                  />
+                )}
+                <span className="relative">{v === "timeline" ? "Timeline" : "Grid"}</span>
               </button>
             ))}
           </div>
         </div>
-
-        <div className="flex items-center gap-1 bg-white/10 backdrop-blur-md rounded-xl p-1">
-          <button
-            onClick={() => setView("timeline")}
-            aria-pressed={view === "timeline"}
-            className={`px-3 py-2 rounded-lg text-xs font-bold uppercase tracking-wide transition-colors ${
-              view === "timeline" ? "bg-accent text-white" : "text-muted hover:text-white"
-            }`}
-          >
-            Timeline
-          </button>
-          <button
-            onClick={() => setView("grid")}
-            aria-pressed={view === "grid"}
-            className={`px-3 py-2 rounded-lg text-xs font-bold uppercase tracking-wide transition-colors ${
-              view === "grid" ? "bg-accent text-white" : "text-muted hover:text-white"
-            }`}
-          >
-            Grid
-          </button>
-        </div>
       </div>
 
       {/* Progress */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 mb-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 mb-10">
         <ProgressBar watchedCount={watchedCount} total={sorted.length} />
+      </div>
+
+      {/* Section heading */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 mb-8">
+        <div className="flex items-center gap-4">
+          <span className="h-px flex-1 bg-gradient-to-r from-transparent via-white/15 to-white/15" />
+          <h2 className="font-display text-lg tracking-[0.3em] text-muted uppercase whitespace-nowrap">
+            Timeline
+          </h2>
+          <span className="h-px flex-1 bg-gradient-to-l from-transparent via-white/15 to-white/15" />
+        </div>
       </div>
 
       {/* Empty state */}
@@ -133,7 +210,14 @@ export default function App() {
       {view === "timeline" && filtered.length > 0 && (
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 pb-16">
           {/* center line, desktop only */}
-          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 -translate-x-1/2 bg-gradient-to-b from-accent-bright to-accent rounded-full shadow-[0_0_20px_rgba(237,29,36,0.25)]" />
+          <motion.div
+            initial={{ scaleY: 0 }}
+            whileInView={{ scaleY: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            style={{ transformOrigin: "top" }}
+            className="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 -translate-x-1/2 bg-gradient-to-b from-accent-bright to-accent rounded-full shadow-[0_0_20px_rgba(237,29,36,0.25)]"
+          />
 
           <div className="flex flex-col gap-10 md:gap-14">
             {filtered.map((item, i) => (
@@ -143,13 +227,13 @@ export default function App() {
 
                 {i % 2 === 0 ? (
                   <>
-                    <MovieCard item={item} watched={!!watchedMap[item.id]} onToggleWatched={toggleWatched} />
+                    <MovieCard item={item} watched={!!watchedMap[item.id]} onToggleWatched={toggleWatched} sortMode={sortMode} />
                     <div className="hidden md:block" />
                   </>
                 ) : (
                   <>
                     <div className="hidden md:block" />
-                    <MovieCard item={item} watched={!!watchedMap[item.id]} onToggleWatched={toggleWatched} />
+                    <MovieCard item={item} watched={!!watchedMap[item.id]} onToggleWatched={toggleWatched} sortMode={sortMode} />
                   </>
                 )}
               </div>
@@ -168,6 +252,7 @@ export default function App() {
               watched={!!watchedMap[item.id]}
               onToggleWatched={toggleWatched}
               layout="grid"
+              sortMode={sortMode}
             />
           ))}
         </div>

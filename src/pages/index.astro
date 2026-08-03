@@ -2,39 +2,50 @@
 import Layout from "../layouts/Layout.astro";
 import CountdownTimer from "../components/CountdownTimer.jsx";
 import SectionVideo from "../components/SectionVideo.jsx";
+import CharacterSpotlight from "../components/CharacterSpotlight.jsx";
 import App from "../components/App.jsx";
 
 // Hero gets its own single looping video.
 const HERO_PLAYLIST = ["/bg/doomsday.mp4"];
 
-// Timeline/main section gets its own separate playlist — add more
+// Timeline/main section gets its own separate video — add more
 // clips here any time, they'll play in order and loop back to the first.
 const TIMELINE_PLAYLIST = [
   "/bg/doomsday-1.mp4",
-  "/bg/doomsday-2.mp4",
-  "/bg/doomsday-3.mp4",
 ];
 ---
 
 <Layout>
   <!-- HERO — its own video, doomsday.mp4 -->
-  <section class="relative min-h-[70vh] flex flex-col items-center justify-center overflow-hidden border-b border-white/5">
-    <SectionVideo client:load playlist={HERO_PLAYLIST} />
+  <section class="relative min-h-[80vh] flex items-center overflow-hidden border-b border-white/5">
+    <SectionVideo client:load playlist={HERO_PLAYLIST} overlay="soft" />
 
-    <div class="relative z-10 flex flex-col items-center gap-8 px-4 text-center">
-      <p class="font-display text-3xl sm:text-5xl tracking-widest text-white">
-        MARVEL <span class="text-accent">STUDIOS</span>
-      </p>
-      <h1 class="font-display text-4xl sm:text-6xl tracking-wide leading-none">
-        WAY TO <span class="text-accent">DOOMSDAY</span>
-      </h1>
-      <p class="text-muted max-w-md text-sm sm:text-base">
-        Every MCU movie and series, in order, before Avengers: Doomsday hits theaters.
-      </p>
+    <div class="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 py-16">
+      <div class="grid lg:grid-cols-[1fr_320px] gap-10 lg:gap-14 items-center">
+        <!-- Left: main hero glass panel -->
+        <div class="relative rounded-3xl border border-white/15 bg-white/[0.04] backdrop-blur-md shadow-2xl shadow-black/40 px-6 py-10 sm:px-10 sm:py-14 flex flex-col items-center lg:items-start text-center lg:text-left gap-6 overflow-hidden">
+          <!-- glass sheen -->
+          <div class="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/[0.08] via-transparent to-transparent" />
+          <div class="pointer-events-none absolute -top-24 -left-24 w-64 h-64 rounded-full bg-accent/10 blur-3xl" />
 
-      <div class="flex flex-col items-center gap-2 mt-2">
-        <span class="text-xs uppercase tracking-widest text-muted">Countdown to release</span>
-        <CountdownTimer client:load />
+          <p class="relative font-display text-3xl sm:text-5xl tracking-widest text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.6)]">
+            MARVEL <span class="text-accent">STUDIOS</span>
+          </p>
+          <h1 class="relative font-display text-4xl sm:text-6xl tracking-wide leading-none drop-shadow-[0_2px_12px_rgba(0,0,0,0.6)]">
+            WAY TO <span class="text-accent">DOOMSDAY</span>
+          </h1>
+          <p class="relative text-muted max-w-md text-sm sm:text-base drop-shadow-[0_1px_6px_rgba(0,0,0,0.6)]">
+            Every MCU movie and series, in order, before Avengers: Doomsday hits theaters.
+          </p>
+
+          <div class="relative flex flex-col items-center lg:items-start gap-2 mt-2">
+            <span class="text-xs uppercase tracking-widest text-muted">Countdown to release</span>
+            <CountdownTimer client:load />
+          </div>
+        </div>
+
+        <!-- Right: rotating character spotlight -->
+        <CharacterSpotlight client:load />
       </div>
     </div>
   </section>

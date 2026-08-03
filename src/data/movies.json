@@ -7,9 +7,9 @@
     "phase": 1,
     "chronologicalYear": 1943,
     "poster": "/posters/Captain_America_The_First_Avenger.jpg",
-    "clipUrl": "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/clips-v1/captain-america-first-avenger.mp4",
     "desc": "Steve Rogers becomes the first super soldier to fight in WWII.",
-    "cast": "Chris Evans"
+    "cast": "Chris Evans",
+    "clip": "test.mp4"
   },
   {
     "id": "captain-marvel",
@@ -19,9 +19,9 @@
     "phase": 3,
     "chronologicalYear": 1995,
     "poster": "/posters/Captain_Marvel.jpg",
-    "clipUrl": "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/clips-v1/captain-marvel.mp4",
     "desc": "Carol Danvers discovers her past and her powers while caught in a Kree-Skrull war.",
-    "cast": "Brie Larson"
+    "cast": "Brie Larson",
+    "clip": "captain-marvel.mp4"
   },
   {
     "id": "iron-man",
@@ -31,9 +31,9 @@
     "phase": 1,
     "chronologicalYear": 2010,
     "poster": "/posters/Iron_Man.jpg",
-    "clipUrl": "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/clips-v1/iron-man.mp4",
     "desc": "Tony Stark builds his first armored suit after being held captive.",
-    "cast": "Robert Downey Jr."
+    "cast": "Robert Downey Jr.",
+    "clip": "iron-man.mp4"
   },
   {
     "id": "incredible-hulk",
@@ -43,9 +43,9 @@
     "phase": 1,
     "chronologicalYear": 2011,
     "poster": "/posters/The_Incredible_Hulk.jpg",
-    "clipUrl": "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/clips-v1/incredible-hulk.mp4",
     "desc": "Bruce Banner evades the military while trying to control his rage.",
-    "cast": "Edward Norton"
+    "cast": "Edward Norton",
+    "clip": "incredible-hulk.mp4"
   },
   {
     "id": "iron-man-2",
@@ -55,9 +55,9 @@
     "phase": 1,
     "chronologicalYear": 2011,
     "poster": "/posters/Iron_Man_2.jpg",
-    "clipUrl": "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/clips-v1/iron-man-2.mp4",
     "desc": "Tony faces new threats while his health quietly deteriorates.",
-    "cast": "Robert Downey Jr."
+    "cast": "Robert Downey Jr.",
+    "clip": "iron-man-2.mp4"
   },
   {
     "id": "thor",
@@ -67,9 +67,9 @@
     "phase": 1,
     "chronologicalYear": 2011,
     "poster": "/posters/Thor.jpg",
-    "clipUrl": "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/clips-v1/thor.mp4",
     "desc": "Thor is banished to Earth and must learn humility to reclaim his hammer.",
-    "cast": "Chris Hemsworth"
+    "cast": "Chris Hemsworth",
+    "clip": "thor.mp4"
   },
   {
     "id": "avengers",
@@ -79,9 +79,9 @@
     "phase": 1,
     "chronologicalYear": 2012,
     "poster": "/posters/The_Avengers.jpg",
-    "clipUrl": "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/clips-v1/avengers.mp4",
     "desc": "Earth's mightiest heroes assemble to stop Loki and the Chitauri.",
-    "cast": "Ensemble"
+    "cast": "Ensemble",
+    "clip": "avengers.mp4"
   },
   {
     "id": "iron-man-3",
@@ -91,9 +91,9 @@
     "phase": 2,
     "chronologicalYear": 2012,
     "poster": "/posters/Iron_Man_3.jpg",
-    "clipUrl": "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/clips-v1/iron-man-3.mp4",
     "desc": "Tony battles PTSD and a new enemy calling himself the Mandarin.",
-    "cast": "Robert Downey Jr."
+    "cast": "Robert Downey Jr.",
+    "clip": "iron-man-3.mp4"
   },
   {
     "id": "thor-dark-world",
@@ -103,9 +103,9 @@
     "phase": 2,
     "chronologicalYear": 2013,
     "poster": "/posters/Thor_The_Dark_World.jpg",
-    "clipUrl": "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/clips-v1/thor-dark-world.mp4",
     "desc": "Thor fights to save the universe from the ancient Dark Elves.",
-    "cast": "Chris Hemsworth"
+    "cast": "Chris Hemsworth",
+    "clip": "thor-dark-world.mp4"
   },
   {
     "id": "captain-america-winter-soldier",
@@ -115,9 +115,9 @@
     "phase": 2,
     "chronologicalYear": 2014,
     "poster": "/posters/Captain_America_The_Winter_Soldier.jpg",
-    "clipUrl": "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/clips-v1/winter-soldier.mp4",
     "desc": "Cap uncovers a conspiracy embedded inside S.H.I.E.L.D. itself.",
-    "cast": "Chris Evans"
+    "cast": "Chris Evans",
+    "clip": "winter-soldier.mp4"
   },
   {
     "id": "guardians-vol-1",
@@ -127,9 +127,9 @@
     "phase": 2,
     "chronologicalYear": 2014,
     "poster": "/posters/Guardians_of_the_Galaxy.jpg",
-    "clipUrl": "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/clips-v1/guardians-1.mp4",
     "desc": "A ragtag crew protects the galaxy from a fanatical warlord.",
-    "cast": "Chris Pratt"
+    "cast": "Chris Pratt",
+    "clip": "guardians-1.mp4"
   },
   {
     "id": "guardians-vol-2",
@@ -139,9 +139,9 @@
     "phase": 3,
     "chronologicalYear": 2014,
     "poster": "/posters/Guardians_of_the_Galaxy_Vol_2.jpg",
-    "clipUrl": "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/clips-v1/guardians-2.mp4",
     "desc": "The Guardians uncover Peter Quill's true parentage while dodging a new threat.",
-    "cast": "Chris Pratt"
+    "cast": "Chris Pratt",
+    "clip": "guardians-2.mp4"
   },
   {
     "id": "avengers-age-of-ultron",
@@ -151,9 +151,9 @@
     "phase": 2,
     "chronologicalYear": 2015,
     "poster": "/posters/Avengers_Age_of_Ultron.jpg",
-    "clipUrl": "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/clips-v1/age-of-ultron.mp4",
     "desc": "The Avengers face an artificial intelligence of their own making.",
-    "cast": "Ensemble"
+    "cast": "Ensemble",
+    "clip": "age-of-ultron.mp4"
   },
   {
     "id": "ant-man",
@@ -163,9 +163,9 @@
     "phase": 2,
     "chronologicalYear": 2015,
     "poster": "/posters/Ant_Man.jpg",
-    "clipUrl": "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/clips-v1/ant-man.mp4",
     "desc": "Scott Lang becomes the size-shifting hero, Ant-Man.",
-    "cast": "Paul Rudd"
+    "cast": "Paul Rudd",
+    "clip": "ant-man.mp4"
   },
   {
     "id": "captain-america-civil-war",
@@ -175,9 +175,9 @@
     "phase": 3,
     "chronologicalYear": 2016,
     "poster": "/posters/Captain_America_Civil_War.jpg",
-    "clipUrl": "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/clips-v1/civil-war.mp4",
     "desc": "The Avengers split into two camps over a government accountability act.",
-    "cast": "Chris Evans"
+    "cast": "Chris Evans",
+    "clip": "civil-war.mp4"
   },
   {
     "id": "black-widow",
@@ -187,9 +187,9 @@
     "phase": 4,
     "chronologicalYear": 2016,
     "poster": "/posters/Black_Widow.jpg",
-    "clipUrl": "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/clips-v1/black-widow.mp4",
     "desc": "Natasha Romanoff confronts her past as a spy while on the run.",
-    "cast": "Scarlett Johansson"
+    "cast": "Scarlett Johansson",
+    "clip": "black-widow.mp4"
   },
   {
     "id": "black-panther",
@@ -199,9 +199,9 @@
     "phase": 3,
     "chronologicalYear": 2016,
     "poster": "/posters/Black_Panther.jpg",
-    "clipUrl": "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/clips-v1/black-panther.mp4",
     "desc": "T'Challa returns home to claim the throne and protect Wakanda's secrets.",
-    "cast": "Chadwick Boseman"
+    "cast": "Chadwick Boseman",
+    "clip": "black-panther.mp4"
   },
   {
     "id": "spider-man-homecoming",
@@ -211,9 +211,9 @@
     "phase": 3,
     "chronologicalYear": 2016,
     "poster": "/posters/Spider-Man_Homecoming.jpg",
-    "clipUrl": "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/clips-v1/spider-man-homecoming.mp4",
     "desc": "Peter Parker balances high school life with his new Avengers ambitions.",
-    "cast": "Tom Holland"
+    "cast": "Tom Holland",
+    "clip": "spider-man-homecoming.mp4"
   },
   {
     "id": "doctor-strange",
@@ -223,9 +223,9 @@
     "phase": 3,
     "chronologicalYear": 2016,
     "poster": "/posters/Doctor_Strange.jpg",
-    "clipUrl": "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/clips-v1/doctor-strange.mp4",
     "desc": "A brilliant surgeon learns the mystic arts after a career-ending accident.",
-    "cast": "Benedict Cumberbatch"
+    "cast": "Benedict Cumberbatch",
+    "clip": "doctor-strange.mp4"
   },
   {
     "id": "thor-ragnarok",
@@ -235,9 +235,9 @@
     "phase": 3,
     "chronologicalYear": 2017,
     "poster": "/posters/Thor_Ragnarok.jpg",
-    "clipUrl": "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/clips-v1/thor-ragnarok.mp4",
     "desc": "Thor must escape captivity and stop Hela from destroying Asgard.",
-    "cast": "Chris Hemsworth"
+    "cast": "Chris Hemsworth",
+    "clip": "thor-ragnarok.mp4"
   },
   {
     "id": "avengers-infinity-war",
@@ -247,9 +247,9 @@
     "phase": 3,
     "chronologicalYear": 2018,
     "poster": "/posters/Avengers_Infinity_War.jpg",
-    "clipUrl": "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/clips-v1/infinity-war.mp4",
     "desc": "The Avengers race to stop Thanos from collecting the Infinity Stones.",
-    "cast": "Ensemble"
+    "cast": "Ensemble",
+    "clip": "infinity-war.mp4"
   },
   {
     "id": "ant-man-wasp",
@@ -259,9 +259,9 @@
     "phase": 3,
     "chronologicalYear": 2018,
     "poster": "/posters/Ant_Man_and_the_Wasp.jpg",
-    "clipUrl": "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/clips-v1/ant-man-wasp.mp4",
     "desc": "Scott teams up with Hope van Dyne on a rescue mission into the Quantum Realm.",
-    "cast": "Paul Rudd"
+    "cast": "Paul Rudd",
+    "clip": "ant-man-wasp.mp4"
   },
   {
     "id": "avengers-endgame",
@@ -271,9 +271,9 @@
     "phase": 3,
     "chronologicalYear": 2023,
     "poster": "/posters/Avengers_Endgame.jpg",
-    "clipUrl": "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/clips-v1/endgame.mp4",
     "desc": "The remaining Avengers attempt a time heist to undo the Blip.",
-    "cast": "Ensemble"
+    "cast": "Ensemble",
+    "clip": "endgame.mp4"
   },
   {
     "id": "wandavision",
@@ -283,9 +283,9 @@
     "phase": 4,
     "chronologicalYear": 2023,
     "poster": "/posters/WandaVision.jpg",
-    "clipUrl": "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/clips-v1/wandavision.mp4",
     "desc": "Wanda Maximoff builds a sitcom reality in Westview to bury her grief.",
-    "cast": "Elizabeth Olsen"
+    "cast": "Elizabeth Olsen",
+    "clip": "wandavision.mp4"
   },
   {
     "id": "falcon-winter-soldier",
@@ -295,9 +295,9 @@
     "phase": 4,
     "chronologicalYear": 2024,
     "poster": "/posters/The_Falcon_and_the_Winter_Soldier.jpg",
-    "clipUrl": "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/clips-v1/falcon-winter-soldier.mp4",
     "desc": "Sam Wilson and Bucky Barnes team up against a new Super Soldier threat.",
-    "cast": "Anthony Mackie"
+    "cast": "Anthony Mackie",
+    "clip": "falcon-winter-soldier.mp4"
   },
   {
     "id": "loki",
@@ -307,9 +307,9 @@
     "phase": 4,
     "chronologicalYear": 2023,
     "poster": "/posters/Loki.jpg",
-    "clipUrl": "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/clips-v1/loki.mp4",
     "desc": "A variant Loki is recruited by the TVA to fix fractures in the timeline.",
-    "cast": "Tom Hiddleston"
+    "cast": "Tom Hiddleston",
+    "clip": "loki.mp4"
   },
   {
     "id": "what-if",
@@ -319,9 +319,9 @@
     "phase": 4,
     "chronologicalYear": 2023,
     "poster": "/posters/What_If.jpg",
-    "clipUrl": "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/clips-v1/what-if.mp4",
     "desc": "The Watcher explores alternate realities born from single changed moments.",
-    "cast": "Jeffrey Wright"
+    "cast": "Jeffrey Wright",
+    "clip": "what-if.mp4"
   },
   {
     "id": "shang-chi",
@@ -331,9 +331,9 @@
     "phase": 4,
     "chronologicalYear": 2024,
     "poster": "/posters/Shang-Chi_and_the_Legend_of_the_Ten_Rings.jpg",
-    "clipUrl": "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/clips-v1/shang-chi.mp4",
     "desc": "Shang-Chi confronts his father's legacy and the mysterious Ten Rings.",
-    "cast": "Simu Liu"
+    "cast": "Simu Liu",
+    "clip": "shang-chi.mp4"
   },
   {
     "id": "eternals",
@@ -343,9 +343,9 @@
     "phase": 4,
     "chronologicalYear": 2024,
     "poster": "/posters/Eternals.jpg",
-    "clipUrl": "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/clips-v1/eternals.mp4",
     "desc": "An ancient group of immortals reunites to face the emergence of the Deviants.",
-    "cast": "Gemma Chan"
+    "cast": "Gemma Chan",
+    "clip": "eternals.mp4"
   },
   {
     "id": "hawkeye",
@@ -355,9 +355,9 @@
     "phase": 4,
     "chronologicalYear": 2024,
     "poster": "/posters/Hawkeye.jpg",
-    "clipUrl": "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/clips-v1/hawkeye.mp4",
     "desc": "Clint Barton trains Kate Bishop while an old enemy resurfaces at Christmas.",
-    "cast": "Jeremy Renner"
+    "cast": "Jeremy Renner",
+    "clip": "hawkeye.mp4"
   },
   {
     "id": "spider-man-far-from-home",
@@ -367,9 +367,9 @@
     "phase": 3,
     "chronologicalYear": 2024,
     "poster": "/posters/Spider-Man_Far_From_Home.jpg",
-    "clipUrl": "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/clips-v1/spider-man-far-from-home.mp4",
     "desc": "Peter Parker faces Mysterio while grieving Tony Stark on a school trip to Europe.",
-    "cast": "Tom Holland"
+    "cast": "Tom Holland",
+    "clip": "spider-man-far-from-home.mp4"
   },
   {
     "id": "spider-man-no-way-home",
@@ -379,9 +379,9 @@
     "phase": 4,
     "chronologicalYear": 2024,
     "poster": "/posters/Spider-Man_No_Way_Home.jpg",
-    "clipUrl": "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/clips-v1/spider-man-no-way-home.mp4",
     "desc": "A spell gone wrong tears open the multiverse and Peter's secret identity.",
-    "cast": "Tom Holland"
+    "cast": "Tom Holland",
+    "clip": "spider-man-no-way-home.mp4"
   },
   {
     "id": "moon-knight",
@@ -391,9 +391,9 @@
     "phase": 4,
     "chronologicalYear": 2024,
     "poster": "/posters/Moon_Knight.jpg",
-    "clipUrl": "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/clips-v1/moon-knight.mp4",
     "desc": "Steven Grant discovers he shares a body with mercenary Marc Spector.",
-    "cast": "Oscar Isaac"
+    "cast": "Oscar Isaac",
+    "clip": "moon-knight.mp4"
   },
   {
     "id": "ms-marvel",
@@ -403,9 +403,9 @@
     "phase": 4,
     "chronologicalYear": 2025,
     "poster": "/posters/Ms._Marvel.jpg",
-    "clipUrl": "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/clips-v1/ms-marvel.mp4",
     "desc": "Kamala Khan discovers her powers and becomes her idols' biggest fan turned hero.",
-    "cast": "Iman Vellani"
+    "cast": "Iman Vellani",
+    "clip": "ms-marvel.mp4"
   },
   {
     "id": "doctor-strange-multiverse-of-madness",
@@ -415,9 +415,9 @@
     "phase": 4,
     "chronologicalYear": 2025,
     "poster": "/posters/Doctor_Strange_in_the_Multiverse_of_Madness.jpg",
-    "clipUrl": "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/clips-v1/doctor-strange-multiverse-of-madness.mp4",
     "desc": "Strange journeys across realities to protect a girl who can travel between them.",
-    "cast": "Benedict Cumberbatch"
+    "cast": "Benedict Cumberbatch",
+    "clip": "doctor-strange-multiverse-of-madness.mp4"
   },
   {
     "id": "thor-love-and-thunder",
@@ -427,9 +427,9 @@
     "phase": 4,
     "chronologicalYear": 2025,
     "poster": "/posters/Thor_Love_and_Thunder.webp",
-    "clipUrl": "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/clips-v1/thor-love-and-thunder.mp4",
     "desc": "Thor seeks inner peace but must face Gorr the God Butcher instead.",
-    "cast": "Chris Hemsworth"
+    "cast": "Chris Hemsworth",
+    "clip": "thor-love-and-thunder.mp4"
   },
   {
     "id": "she-hulk",
@@ -439,9 +439,21 @@
     "phase": 4,
     "chronologicalYear": 2025,
     "poster": "/posters/She-Hulk_Attorney_at_Law.jpg",
-    "clipUrl": "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/clips-v1/she-hulk.mp4",
     "desc": "Jennifer Walters navigates life and law as a newly-minted Hulk.",
-    "cast": "Tatiana Maslany"
+    "cast": "Tatiana Maslany",
+    "clip": "she-hulk.mp4"
+  },
+  {
+    "id": "black-panther-wakanda-forever",
+    "title": "Black Panther: Wakanda Forever",
+    "type": "movie",
+    "year": 2022,
+    "phase": 4,
+    "chronologicalYear": 2025,
+    "poster": "/posters/Black_Panther_Wakanda_Forever.jpg",
+    "desc": "Wakanda fights to protect its nation from world powers while mourning T'Challa and confronting Namor's underwater kingdom.",
+    "cast": "Letitia Wright",
+    "clip": "wakanda-forever.mp4"
   },
   {
     "id": "werewolf-by-night",
@@ -451,9 +463,9 @@
     "phase": 4,
     "chronologicalYear": 2025,
     "poster": "/posters/Werewolf_By_Night.webp",
-    "clipUrl": "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/clips-v1/werewolf-by-night.mp4",
     "desc": "Monster hunters compete in a deadly contest at a gothic mansion.",
-    "cast": "Gael García Bernal"
+    "cast": "Gael Garc\u00eda Bernal",
+    "clip": "werewolf-by-night.mp4"
   },
   {
     "id": "secret-invasion",
@@ -463,9 +475,9 @@
     "phase": 5,
     "chronologicalYear": 2025,
     "poster": "/posters/Secret_Invasion.jpg",
-    "clipUrl": "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/clips-v1/secret-invasion.mp4",
     "desc": "Nick Fury uncovers a shape-shifting Skrull conspiracy on Earth.",
-    "cast": "Samuel L. Jackson"
+    "cast": "Samuel L. Jackson",
+    "clip": "secret-invasion.mp4"
   },
   {
     "id": "ant-man-quantumania",
@@ -475,9 +487,9 @@
     "phase": 5,
     "chronologicalYear": 2025,
     "poster": "/posters/Ant_Man_and_the_Wasp_Quantumania.jpg",
-    "clipUrl": "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/clips-v1/ant-man-quantumania.mp4",
     "desc": "The Lang-van Dyne family is pulled into the Quantum Realm to face Kang.",
-    "cast": "Paul Rudd"
+    "cast": "Paul Rudd",
+    "clip": "ant-man-quantumania.mp4"
   },
   {
     "id": "guardians-vol-3",
@@ -487,9 +499,9 @@
     "phase": 5,
     "chronologicalYear": 2025,
     "poster": "/posters/Guardians_of_the_Galaxy_Vol_3.jpg",
-    "clipUrl": "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/clips-v1/guardians-3.mp4",
     "desc": "The Guardians risk everything to save Rocket from his dark origins.",
-    "cast": "Chris Pratt"
+    "cast": "Chris Pratt",
+    "clip": "guardians-3.mp4"
   },
   {
     "id": "the-marvels",
@@ -499,9 +511,9 @@
     "phase": 5,
     "chronologicalYear": 2025,
     "poster": "/posters/The_Marvels.jpg",
-    "clipUrl": "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/clips-v1/the-marvels.mp4",
     "desc": "Carol Danvers, Kamala Khan, and Monica Rambeau swap places when their powers entangle.",
-    "cast": "Brie Larson"
+    "cast": "Brie Larson",
+    "clip": "the-marvels.mp4"
   },
   {
     "id": "echo",
@@ -511,9 +523,9 @@
     "phase": 5,
     "chronologicalYear": 2025,
     "poster": "/posters/Echo.jpg",
-    "clipUrl": "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/clips-v1/echo.mp4",
     "desc": "Maya Lopez returns home and confronts her family ties to Kingpin's empire.",
-    "cast": "Alaqua Cox"
+    "cast": "Alaqua Cox",
+    "clip": "echo.mp4"
   },
   {
     "id": "agatha-all-along",
@@ -523,9 +535,9 @@
     "phase": 5,
     "chronologicalYear": 2025,
     "poster": "/posters/Agatha_All_Along.jpg",
-    "clipUrl": "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/clips-v1/agatha-all-along.mp4",
     "desc": "A stripped-of-power Agatha Harkness walks the Witches' Road for a shot at redemption.",
-    "cast": "Kathryn Hahn"
+    "cast": "Kathryn Hahn",
+    "clip": "agatha-all-along.mp4"
   },
   {
     "id": "deadpool-and-wolverine",
@@ -535,9 +547,9 @@
     "phase": 5,
     "chronologicalYear": 2025,
     "poster": "/posters/Deadpool_and_Wolverine.webp",
-    "clipUrl": "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/clips-v1/deadpool-and-wolverine.mp4",
     "desc": "Deadpool drags a reluctant Wolverine variant into a fight to save his universe.",
-    "cast": "Ryan Reynolds"
+    "cast": "Ryan Reynolds",
+    "clip": "deadpool-and-wolverine.mp4"
   },
   {
     "id": "captain-america-brave-new-world",
@@ -547,9 +559,9 @@
     "phase": 5,
     "chronologicalYear": 2025,
     "poster": "/posters/Captain_America_Brave_New_World.jpg",
-    "clipUrl": "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/clips-v1/captain-america-brave-new-world.mp4",
     "desc": "Sam Wilson steps fully into the Captain America mantle amid a global crisis.",
-    "cast": "Anthony Mackie"
+    "cast": "Anthony Mackie",
+    "clip": "captain-america-brave-new-world.mp4"
   },
   {
     "id": "daredevil-born-again",
@@ -559,9 +571,9 @@
     "phase": 5,
     "chronologicalYear": 2025,
     "poster": "/posters/Daredevil_Born_Again.jpg",
-    "clipUrl": "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/clips-v1/daredevil-born-again.mp4",
     "desc": "Matt Murdock and Wilson Fisk's paths collide again in New York.",
-    "cast": "Charlie Cox"
+    "cast": "Charlie Cox",
+    "clip": "daredevil-born-again.mp4"
   },
   {
     "id": "ironheart",
@@ -571,9 +583,9 @@
     "phase": 5,
     "chronologicalYear": 2025,
     "poster": "/posters/Ironheart.jpg",
-    "clipUrl": "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/clips-v1/ironheart.mp4",
     "desc": "Genius inventor Riri Williams builds her own armored suit and crosses paths with magic.",
-    "cast": "Dominique Thorne"
+    "cast": "Dominique Thorne",
+    "clip": "ironheart.mp4"
   },
   {
     "id": "thunderbolts",
@@ -583,9 +595,9 @@
     "phase": 5,
     "chronologicalYear": 2025,
     "poster": "/posters/Thunderbolts.jpg",
-    "clipUrl": "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/clips-v1/thunderbolts.mp4",
     "desc": "A team of morally grey antiheroes is thrown together on a doomed black-ops mission.",
-    "cast": "Florence Pugh"
+    "cast": "Florence Pugh",
+    "clip": "thunderbolts.mp4"
   },
   {
     "id": "fantastic-four-first-steps",
@@ -595,9 +607,9 @@
     "phase": 6,
     "chronologicalYear": 2025,
     "poster": "/posters/Fantastic_Four.jpg",
-    "clipUrl": "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/clips-v1/fantastic-four-first-steps.mp4",
     "desc": "Marvel's First Family defends their retro-futuristic Earth from Galactus.",
-    "cast": "Pedro Pascal"
+    "cast": "Pedro Pascal",
+    "clip": "fantastic-four-first-steps.mp4"
   },
   {
     "id": "wonder-man",
@@ -607,9 +619,21 @@
     "phase": 6,
     "chronologicalYear": 2026,
     "poster": "/posters/Wonder_Man.jpg",
-    "clipUrl": "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/clips-v1/wonder-man.mp4",
     "desc": "Stuntman Simon Williams gets pulled into the superhero life he's always doubled for.",
-    "cast": "Yahya Abdul-Mateen II"
+    "cast": "Yahya Abdul-Mateen II",
+    "clip": "wonder-man.mp4"
+  },
+  {
+    "id": "spider-man-brand-new-day",
+    "title": "Spider-Man: Brand New Day",
+    "type": "movie",
+    "year": 2026,
+    "phase": 6,
+    "chronologicalYear": 2030,
+    "poster": "/posters/Spider-Man_Brand_New_Day.jpg",
+    "desc": "Peter Parker fights crime full-time in a world that's forgotten him, until a hidden new threat forces a change he can't control.",
+    "cast": "Tom Holland",
+    "clip": "spider-man-brand-new-day.mp4"
   },
   {
     "id": "avengers-doomsday",
@@ -619,9 +643,9 @@
     "phase": 6,
     "chronologicalYear": 2029,
     "poster": "/posters/Avengers_Doomsday.jpg",
-    "clipUrl": "https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/clips-v1/doomsday.mp4",
-    "desc": "The Avengers face Doctor Doom. The final entry on the list.",
+    "desc": "The Avengers face Doctor Doom in a battle that reshapes the multiverse.",
     "cast": "Ensemble",
-    "isFinale": true
+    "clip": "doomsday.mp4",
+    "releaseDate": "2026-12-18"
   }
 ]

@@ -1,5 +1,8 @@
 # build output
 dist/
+.output/
+.vercel/
+
 # generated types
 .astro/
 
@@ -12,13 +15,27 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-
-# environment variables
+# environment variables & secrets
 .env
+.env.local
+.env.*.local
 .env.production
+*.pem
+*.key
+
+# cloudflare / wrangler
+.wrangler/
+
+# docs not meant for public repo
+Guide.md
 
 # macOS-specific files
 .DS_Store
 
 # jetbrains setting folder
 .idea/
+
+# vscode (optional, agar personal settings commit nahi karni)
+.vscode/*
+!.vscode/extensions.json
+
