@@ -7,6 +7,8 @@
   --color-muted: #a9a9a9;
   --color-accent: #ed1d24;
   --color-accent-bright: #ff3b30;
+  --color-steel: #4a7fa7;
+  --color-steel-bright: #6ba3d6;
   --font-display: "Bebas Neue", "Roboto Condensed", system-ui, sans-serif;
   --font-body: "Roboto", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
@@ -33,6 +35,15 @@ body {
     transparent 20px
   );
   background-color: #141416;
+}
+
+/* Phase tabs horizontal scroll — hide scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -3,12 +3,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import VideoPlayer from "./VideoPlayer.jsx";
 
 const TYPE_LABEL = { movie: "Movie", series: "Series", special: "Special" };
+const TYPE_COLOR = { movie: "bg-accent", series: "bg-steel", special: "bg-accent" };
 
 const CF_BASE_URL = import.meta.env.PUBLIC_CF_BASE_URL;
 
 function getClipUrl(item) {
-  // movies.json stores only the filename in `clip`; the base domain
-  // lives in .env (PUBLIC_CF_BASE_URL) so it never gets committed to git.
   if (!item.clip) return "";
   return `${CF_BASE_URL}/${item.clip}`;
 }
@@ -30,7 +29,7 @@ function useCountdown(releaseDate) {
     if (!releaseDate) return;
     const tick = () => setTimeLeft(getTimeRemaining(releaseDate));
     tick();
-    const id = setInterval(tick, 60 * 1000); // refresh every minute
+    const id = setInterval(tick, 60 * 1000);
     return () => clearInterval(id);
   }, [releaseDate]);
 
@@ -41,11 +40,11 @@ export default function MovieCard({ item, watched, onToggleWatched, layout = "ti
   const [isPlaying, setIsPlaying] = useState(false);
   const posterIsPlaceholder = item.poster?.includes("PLACEHOLDER");
   const timeLeft = useCountdown(item.releaseDate);
-  const isUpcoming = !!timeLeft; // releaseDate exists and is in the future
+  const isUpcoming = !!timeLeft;
 
   const closeModal = () => setIsPlaying(false);
   const openModal = () => {
-    if (isUpcoming) return; // nothing to play yet
+    if (isUpcoming) return;
     setIsPlaying(true);
   };
 
@@ -64,10 +63,8 @@ export default function MovieCard({ item, watched, onToggleWatched, layout = "ti
             : "border-white/10 hover:border-white/25"
         } ${layout === "timeline" ? "w-full" : ""}`}
       >
-        {/* subtle inner highlight for glass effect */}
         <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-b from-white/10 via-transparent to-transparent opacity-60" />
 
-        {/* Poster area */}
         <div className="relative aspect-[16/9] bg-black overflow-hidden">
           {posterIsPlaceholder ? (
             <div className="media-placeholder absolute inset-0 flex flex-col items-center justify-center gap-2 text-muted">
@@ -94,7 +91,6 @@ export default function MovieCard({ item, watched, onToggleWatched, layout = "ti
               </span>
             </div>
           ) : (
-            /* Center play button, appears on hover */
             <motion.button
               type="button"
               onClick={openModal}
@@ -109,10 +105,9 @@ export default function MovieCard({ item, watched, onToggleWatched, layout = "ti
           )}
         </div>
 
-        {/* Content */}
         <div className="relative p-4 flex flex-col gap-2">
           <div className="flex items-center justify-between gap-2">
-            <span className="inline-block bg-accent text-white text-[11px] font-bold uppercase tracking-wide px-2.5 py-1 rounded-full">
+            <span className={`inline-block ${TYPE_COLOR[item.type] ?? "bg-accent"} text-white text-[11px] font-bold uppercase tracking-wide px-2.5 py-1 rounded-full`}>
               {TYPE_LABEL[item.type] ?? item.type}
             </span>
             {!isUpcoming && (

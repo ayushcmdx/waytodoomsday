@@ -28,7 +28,7 @@ function Unit({ value, label }) {
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: 20, opacity: 0 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
-            className="block font-mono text-2xl sm:text-4xl font-bold text-accent tabular-nums"
+            className="block font-mono text-2xl sm:text-4xl font-bold text-green-500 tabular-nums"
           >
             {display}
           </motion.span>
@@ -51,7 +51,7 @@ export default function CountdownTimer() {
 
   if (!parts) {
     return (
-      <div className="text-accent font-display text-3xl tracking-wide">
+      <div className="text-green-500 font-display text-3xl tracking-wide">
         NOW IN THEATERS
       </div>
     );
@@ -63,11 +63,11 @@ export default function CountdownTimer() {
       aria-live="polite"
     >
       <Unit value={parts.days} label="Days" />
-      <span className="text-accent/40 text-2xl -mt-4">:</span>
+      <span className="text-green-500/40 text-2xl -mt-4">:</span>
       <Unit value={parts.hours} label="Hrs" />
-      <span className="text-accent/40 text-2xl -mt-4">:</span>
+      <span className="text-green-500/40 text-2xl -mt-4">:</span>
       <Unit value={parts.minutes} label="Min" />
-      <span className="text-accent/40 text-2xl -mt-4">:</span>
+      <span className="text-green-500/40 text-2xl -mt-4">:</span>
       <Unit value={parts.seconds} label="Sec" />
     </div>
   );

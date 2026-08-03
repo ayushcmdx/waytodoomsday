@@ -1,0 +1,22 @@
+---
+const links = [
+  { href: "#timeline", label: "Timeline" },
+  { href: "#phases", label: "Phases" },
+  { href: "#road-to-doomsday", label: "Road to Doomsday" },
+];
+---
+
+<nav class="sticky top-0 z-40 border-b border-white/5 bg-bg/70 backdrop-blur-xl">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+    <a href="/" class="font-display text-sm sm:text-base tracking-widest text-white">
+      WAY TO <span class="text-accent">DOOMSDAY</span>
+    </a>
+    <div class="hidden sm:flex items-center gap-6">
+      {links.map((link) => (
+        <a href={link.href} class="text-xs uppercase tracking-widest text-muted hover:text-white transition-colors">
+          {link.label}
+        </a>
+      ))}
+    </div>
+  </div>
+</nav>

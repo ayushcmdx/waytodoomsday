@@ -1,0 +1,146 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-info">
+      <span class="brand-text">WAY TO <span class="accent">DOOMSDAY</span></span>
+      <p class="tagline">
+        Every MCU movie and series, in order, before Avengers: Doomsday hits theaters.
+        An unofficial fan project — not affiliated with Marvel Studios or Disney.
+      </p>
+      <p class="copyright">&copy; {year} Way to Doomsday. All rights reserved.</p>
+    </div>
+
+    <div class="footer-contact">
+      <span class="contact-heading">Contact</span>
+
+      <a href="https://linkedin.com/in/ayushcmd" target="_blank" rel="noopener noreferrer" class="contact-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+          <rect width="4" height="12" x="2" y="9"></rect>
+          <circle cx="4" cy="4" r="2"></circle>
+        </svg>
+        <span>LinkedIn</span>
+      </a>
+
+      <a href="mailto:ayushcmd@outlook.com" class="contact-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+        </svg>
+        <span>ayushcmd@outlook.com</span>
+      </a>
+
+      <a href="/privacy-policy" class="contact-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <path d="M14 2v6h6"></path>
+          <path d="M16 13H8"></path>
+          <path d="M16 17H8"></path>
+          <path d="M10 9H8"></path>
+        </svg>
+        <span>Privacy Policy</span>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    width: 100%;
+    background: #0a0a0a;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 3rem 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+  }
+
+  .footer-info {
+    max-width: 480px;
+    text-align: left;
+  }
+
+  .brand-text {
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    font-size: 1rem;
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+
+  .accent {
+    color: #e5231b;
+  }
+
+  .tagline {
+    margin-top: 0.6rem;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .copyright {
+    margin-top: 1.25rem;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.35);
+  }
+
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.9rem;
+    text-align: left;
+  }
+
+  .contact-heading {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 0.25rem;
+  }
+
+  .contact-link {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.2s ease;
+  }
+
+  .contact-link svg {
+    flex-shrink: 0;
+    color: rgba(255, 255, 255, 0.55);
+    transition: color 0.2s ease;
+  }
+
+  .contact-link:hover {
+    color: #e5231b;
+  }
+
+  .contact-link:hover svg {
+    color: #e5231b;
+  }
+
+  @media (max-width: 600px) {
+    .footer-inner {
+      flex-direction: column;
+      text-align: left;
+    }
+  }
+</style>
