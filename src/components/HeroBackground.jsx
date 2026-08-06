@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 // Files live in /public/bg/, so the path is just "/bg/filename.mp4".
 const CLIPS = [
   "/bg/doomsday.mp4",
-  "/bg/doomsday-1.mp4",
+  
 ];
 
 export default function HeroBackground() {

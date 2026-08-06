@@ -12,7 +12,6 @@
 ![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
 ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)
 ![Framer Motion](https://img.shields.io/badge/Framer_Motion-black?style=flat-square&logo=framer&logoColor=blue)
-![Cloudflare](https://img.shields.io/badge/Cloudflare_R2-F38020?style=flat-square&logo=cloudflare&logoColor=white)
 
 </div>
 
@@ -63,8 +62,6 @@ The project was also built as an excuse to explore how a content-heavy, media-ri
 ## Tech Stack
 
 The site is built on [Astro](https://astro.build) for static-first performance, with interactive elements implemented as isolated islands in [React](https://react.dev) so that most of the page ships as static markup. Styling is handled entirely with [Tailwind CSS](https://tailwindcss.com), and the motion work — the countdown digits, the spotlight carousel, and modal transitions — is built with [Framer Motion](https://www.framer.com/motion/).
-
-Preview video backgrounds are served from a [Cloudflare R2](https://developers.cloudflare.com/r2/) bucket rather than bundled into the repository. Keeping media assets in object storage rather than the codebase keeps the repository itself lightweight while still allowing larger video files to be served independently and reliably.
 
 ## Project Structure
 

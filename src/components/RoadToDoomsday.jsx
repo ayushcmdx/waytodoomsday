@@ -1,15 +1,5 @@
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import movies from "../data/movies.json";
-import VideoPlayer from "./VideoPlayer.jsx";
 import { useWatched } from "../hooks/useWatched.js";
-
-const CF_BASE_URL = import.meta.env.PUBLIC_CF_BASE_URL;
-
-function getClipUrl(item) {
-  if (!item.clip) return "";
-  return `${CF_BASE_URL}/${item.clip}`;
-}
 
 function isUpcoming(item) {
   if (!item.releaseDate) return false;
@@ -17,8 +7,7 @@ function isUpcoming(item) {
 }
 
 export default function RoadToDoomsday() {
-  const { watchedMap, toggleWatched } = useWatched();
-  const [playingItem, setPlayingItem] = useState(null);
+  const { watchedMap } = useWatched();
 
   // duplicate the full list so the marquee loops seamlessly
   const track = [...movies, ...movies];
@@ -51,20 +40,10 @@ export default function RoadToDoomsday() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
 
-                {upcoming ? (
+                {upcoming && (
                   <div className="absolute inset-0 flex items-center justify-center bg-black/40 backdrop-blur-[1px] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <span className="text-[10px] font-bold uppercase tracking-widest text-white/70">Coming Soon</span>
                   </div>
-                ) : (
-                  <button
-                    type="button"
-                    onClick={() => setPlayingItem(item)}
-                    tabIndex={hidden ? -1 : 0}
-                    aria-label={`Play ${item.title} clip`}
-                    className="absolute inset-0 m-auto w-12 h-12 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-md border border-white/30 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                  >
-                    <span className="text-lg translate-x-0.5">▶</span>
-                  </button>
                 )}
 
                 <div className="absolute bottom-0 left-0 right-0 p-4">
@@ -82,37 +61,6 @@ export default function RoadToDoomsday() {
           })}
         </div>
       </div>
-
-      <AnimatePresence>
-        {playingItem && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.25 }}
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-8 bg-black/80 backdrop-blur-sm"
-            onClick={() => setPlayingItem(null)}
-          >
-            <motion.div
-              initial={{ opacity: 0, scale: 0.92, y: 16 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.92, y: 16 }}
-              transition={{ duration: 0.3, ease: "easeOut" }}
-              className="relative w-full max-w-4xl"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <VideoPlayer
-                src={getClipUrl(playingItem)}
-                title={playingItem.title}
-                itemId={playingItem.id}
-                watched={!!watchedMap[playingItem.id]}
-                onToggleWatched={toggleWatched}
-                onClose={() => setPlayingItem(null)}
-              />
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
 
       <style>{`
         .marquee-viewport {

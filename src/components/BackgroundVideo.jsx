@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from "react";
 // Files live in public/bg/ — reference them without the "public" prefix.
 const PLAYLIST = [
   "/bg/doomsday.mp4",
-  "/bg/doomsday-1.mp4",
   // add more filenames here if you drop more clips into public/bg/ —
   // the player loops back to the first one automatically after the last finishes.
 ];

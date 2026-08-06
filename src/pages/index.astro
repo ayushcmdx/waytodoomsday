@@ -8,7 +8,6 @@ import RoadToDoomsday from "../components/RoadToDoomsday.jsx";
 import App from "../components/App.jsx";
 
 const HERO_PLAYLIST = ["/bg/doomsday.mp4"];
-const TIMELINE_PLAYLIST = ["/bg/doomsday-1.mp4"];
 ---
 
 <Layout>
@@ -56,7 +55,11 @@ const TIMELINE_PLAYLIST = ["/bg/doomsday-1.mp4"];
   </section>
 
   <section class="relative overflow-hidden">
-    <SectionVideo client:load playlist={TIMELINE_PLAYLIST} />
+    <div class="starfield" aria-hidden="true">
+      <div class="stars stars-small"></div>
+      <div class="stars stars-medium"></div>
+      <div class="stars stars-large"></div>
+    </div>
     <main class="relative z-10 pt-10">
       <App client:load />
     </main>
@@ -66,3 +69,67 @@ const TIMELINE_PLAYLIST = ["/bg/doomsday-1.mp4"];
 
   
 </Layout>
+
+<style>
+  .starfield {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(120,255,170,0.04), transparent 60%);
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .stars {
+    position: absolute;
+    inset: -50%;
+    width: 200%;
+    height: 200%;
+    background-repeat: repeat;
+  }
+
+  /* Three star layers at different sizes/depths/speeds for a subtle parallax feel */
+  .stars-small {
+    background-image:
+      radial-gradient(1px 1px at 20px 30px, rgba(120,255,170,0.6), transparent),
+      radial-gradient(1px 1px at 90px 120px, rgba(120,255,170,0.5), transparent),
+      radial-gradient(1px 1px at 160px 60px, rgba(150,255,190,0.55), transparent),
+      radial-gradient(1px 1px at 230px 190px, rgba(120,255,170,0.4), transparent),
+      radial-gradient(1px 1px at 310px 90px, rgba(150,255,190,0.5), transparent);
+    background-size: 340px 220px;
+    animation: drift 120s linear infinite, twinkle 4s ease-in-out infinite alternate;
+  }
+
+  .stars-medium {
+    background-image:
+      radial-gradient(1.5px 1.5px at 60px 80px, rgba(120,255,170,0.7), transparent),
+      radial-gradient(1.5px 1.5px at 180px 40px, rgba(150,255,190,0.5), transparent),
+      radial-gradient(1.5px 1.5px at 280px 160px, rgba(120,255,170,0.6), transparent),
+      radial-gradient(1.5px 1.5px at 360px 220px, rgba(150,255,190,0.45), transparent);
+    background-size: 420px 260px;
+    animation: drift 90s linear infinite reverse, twinkle 5s ease-in-out infinite alternate-reverse;
+  }
+
+  .stars-large {
+    background-image:
+      radial-gradient(2px 2px at 100px 50px, rgba(80,230,140,0.55), transparent),
+      radial-gradient(2px 2px at 240px 140px, rgba(150,255,190,0.6), transparent),
+      radial-gradient(2px 2px at 340px 70px, rgba(120,255,170,0.5), transparent);
+    background-size: 500px 300px;
+    animation: drift 150s linear infinite, twinkle 6s ease-in-out infinite alternate;
+  }
+
+  @keyframes drift {
+    from { transform: translate(0, 0); }
+    to { transform: translate(-200px, -150px); }
+  }
+
+  @keyframes twinkle {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .stars { animation: none !important; }
+  }
+</style>

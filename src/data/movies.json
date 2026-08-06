@@ -9,7 +9,7 @@
     "poster": "/posters/Captain_America_The_First_Avenger.jpg",
     "desc": "Steve Rogers becomes the first super soldier to fight in WWII.",
     "cast": "Chris Evans",
-    "clip": "captain-america.mp4"
+    "link": ""
   },
   {
     "id": "captain-marvel",
@@ -21,7 +21,7 @@
     "poster": "/posters/Captain_Marvel.jpg",
     "desc": "Carol Danvers discovers her past and her powers while caught in a Kree-Skrull war.",
     "cast": "Brie Larson",
-    "clip": "captain-marvel.mp4"
+    "link": ""
   },
   {
     "id": "iron-man",
@@ -33,7 +33,7 @@
     "poster": "/posters/Iron_Man.jpg",
     "desc": "Tony Stark builds his first armored suit after being held captive.",
     "cast": "Robert Downey Jr.",
-    "clip": "iron-man.mp4"
+    "link": "https://drive.google.com/file/d/12htxsq3w372_HYDbnRppYi5QusiKvcAM/view?usp=drivesdk"
   },
   {
     "id": "incredible-hulk",
@@ -45,7 +45,7 @@
     "poster": "/posters/The_Incredible_Hulk.jpg",
     "desc": "Bruce Banner evades the military while trying to control his rage.",
     "cast": "Edward Norton",
-    "clip": "incredible-hulk.mp4"
+    "link": ""
   },
   {
     "id": "iron-man-2",
@@ -57,7 +57,7 @@
     "poster": "/posters/Iron_Man_2.jpg",
     "desc": "Tony faces new threats while his health quietly deteriorates.",
     "cast": "Robert Downey Jr.",
-    "clip": "iron-man-2.mp4"
+    "link": ""
   },
   {
     "id": "thor",
@@ -69,7 +69,7 @@
     "poster": "/posters/Thor.jpg",
     "desc": "Thor is banished to Earth and must learn humility to reclaim his hammer.",
     "cast": "Chris Hemsworth",
-    "clip": "thor.mp4"
+    "link": ""
   },
   {
     "id": "avengers",
@@ -81,7 +81,7 @@
     "poster": "/posters/The_Avengers.jpg",
     "desc": "Earth's mightiest heroes assemble to stop Loki and the Chitauri.",
     "cast": "Ensemble",
-    "clip": "avengers.mp4"
+    "link": ""
   },
   {
     "id": "iron-man-3",
@@ -93,7 +93,7 @@
     "poster": "/posters/Iron_Man_3.jpg",
     "desc": "Tony battles PTSD and a new enemy calling himself the Mandarin.",
     "cast": "Robert Downey Jr.",
-    "clip": "iron-man-3.mp4"
+    "link": ""
   },
   {
     "id": "thor-dark-world",
@@ -105,7 +105,7 @@
     "poster": "/posters/Thor_The_Dark_World.jpg",
     "desc": "Thor fights to save the universe from the ancient Dark Elves.",
     "cast": "Chris Hemsworth",
-    "clip": "thor-dark-world.mp4"
+    "link": ""
   },
   {
     "id": "captain-america-winter-soldier",
@@ -117,7 +117,7 @@
     "poster": "/posters/Captain_America_The_Winter_Soldier.jpg",
     "desc": "Cap uncovers a conspiracy embedded inside S.H.I.E.L.D. itself.",
     "cast": "Chris Evans",
-    "clip": "winter-soldier.mp4"
+    "link": ""
   },
   {
     "id": "guardians-vol-1",
@@ -129,7 +129,7 @@
     "poster": "/posters/Guardians_of_the_Galaxy.jpg",
     "desc": "A ragtag crew protects the galaxy from a fanatical warlord.",
     "cast": "Chris Pratt",
-    "clip": "guardians-1.mp4"
+    "link": ""
   },
   {
     "id": "guardians-vol-2",
@@ -141,7 +141,7 @@
     "poster": "/posters/Guardians_of_the_Galaxy_Vol_2.jpg",
     "desc": "The Guardians uncover Peter Quill's true parentage while dodging a new threat.",
     "cast": "Chris Pratt",
-    "clip": "guardians-2.mp4"
+    "link": ""
   },
   {
     "id": "avengers-age-of-ultron",
@@ -153,7 +153,7 @@
     "poster": "/posters/Avengers_Age_of_Ultron.jpg",
     "desc": "The Avengers face an artificial intelligence of their own making.",
     "cast": "Ensemble",
-    "clip": "age-of-ultron.mp4"
+    "link": ""
   },
   {
     "id": "ant-man",
@@ -165,7 +165,7 @@
     "poster": "/posters/Ant_Man.jpg",
     "desc": "Scott Lang becomes the size-shifting hero, Ant-Man.",
     "cast": "Paul Rudd",
-    "clip": "ant-man.mp4"
+    "link": ""
   },
   {
     "id": "captain-america-civil-war",
@@ -177,7 +177,7 @@
     "poster": "/posters/Captain_America_Civil_War.jpg",
     "desc": "The Avengers split into two camps over a government accountability act.",
     "cast": "Chris Evans",
-    "clip": "civil-war.mp4"
+    "link": ""
   },
   {
     "id": "black-widow",
@@ -189,7 +189,7 @@
     "poster": "/posters/Black_Widow.jpg",
     "desc": "Natasha Romanoff confronts her past as a spy while on the run.",
     "cast": "Scarlett Johansson",
-    "clip": "black-widow.mp4"
+    "link": ""
   },
   {
     "id": "black-panther",
@@ -201,7 +201,7 @@
     "poster": "/posters/Black_Panther.jpg",
     "desc": "T'Challa returns home to claim the throne and protect Wakanda's secrets.",
     "cast": "Chadwick Boseman",
-    "clip": "black-panther.mp4"
+    "link": ""
   },
   {
     "id": "spider-man-homecoming",
@@ -213,7 +213,7 @@
     "poster": "/posters/Spider-Man_Homecoming.jpg",
     "desc": "Peter Parker balances high school life with his new Avengers ambitions.",
     "cast": "Tom Holland",
-    "clip": "spider-man-homecoming.mp4"
+    "link": ""
   },
   {
     "id": "doctor-strange",
@@ -225,7 +225,7 @@
     "poster": "/posters/Doctor_Strange.jpg",
     "desc": "A brilliant surgeon learns the mystic arts after a career-ending accident.",
     "cast": "Benedict Cumberbatch",
-    "clip": "doctor-strange.mp4"
+    "link": ""
   },
   {
     "id": "thor-ragnarok",
@@ -237,7 +237,7 @@
     "poster": "/posters/Thor_Ragnarok.jpg",
     "desc": "Thor must escape captivity and stop Hela from destroying Asgard.",
     "cast": "Chris Hemsworth",
-    "clip": "thor-ragnarok.mp4"
+    "link": ""
   },
   {
     "id": "avengers-infinity-war",
@@ -249,7 +249,7 @@
     "poster": "/posters/Avengers_Infinity_War.jpg",
     "desc": "The Avengers race to stop Thanos from collecting the Infinity Stones.",
     "cast": "Ensemble",
-    "clip": "infinity-war.mp4"
+    "link": ""
   },
   {
     "id": "ant-man-wasp",
@@ -261,7 +261,7 @@
     "poster": "/posters/Ant_Man_and_the_Wasp.jpg",
     "desc": "Scott teams up with Hope van Dyne on a rescue mission into the Quantum Realm.",
     "cast": "Paul Rudd",
-    "clip": "ant-man-wasp.mp4"
+    "link": ""
   },
   {
     "id": "avengers-endgame",
@@ -273,7 +273,7 @@
     "poster": "/posters/Avengers_Endgame.jpg",
     "desc": "The remaining Avengers attempt a time heist to undo the Blip.",
     "cast": "Ensemble",
-    "clip": "endgame.mp4"
+    "link": ""
   },
   {
     "id": "wandavision",
@@ -285,7 +285,7 @@
     "poster": "/posters/WandaVision.jpg",
     "desc": "Wanda Maximoff builds a sitcom reality in Westview to bury her grief.",
     "cast": "Elizabeth Olsen",
-    "clip": "wandavision.mp4"
+    "link": ""
   },
   {
     "id": "falcon-winter-soldier",
@@ -297,7 +297,7 @@
     "poster": "/posters/The_Falcon_and_the_Winter_Soldier.jpg",
     "desc": "Sam Wilson and Bucky Barnes team up against a new Super Soldier threat.",
     "cast": "Anthony Mackie",
-    "clip": "falcon-winter-soldier.mp4"
+    "link": ""
   },
   {
     "id": "loki",
@@ -309,7 +309,7 @@
     "poster": "/posters/Loki.jpg",
     "desc": "A variant Loki is recruited by the TVA to fix fractures in the timeline.",
     "cast": "Tom Hiddleston",
-    "clip": "loki.mp4"
+    "link": ""
   },
   {
     "id": "what-if",
@@ -321,7 +321,7 @@
     "poster": "/posters/What_If.jpg",
     "desc": "The Watcher explores alternate realities born from single changed moments.",
     "cast": "Jeffrey Wright",
-    "clip": "what-if.mp4"
+    "link": ""
   },
   {
     "id": "shang-chi",
@@ -333,7 +333,7 @@
     "poster": "/posters/Shang-Chi_and_the_Legend_of_the_Ten_Rings.jpg",
     "desc": "Shang-Chi confronts his father's legacy and the mysterious Ten Rings.",
     "cast": "Simu Liu",
-    "clip": "shang-chi.mp4"
+    "link": ""
   },
   {
     "id": "eternals",
@@ -345,7 +345,7 @@
     "poster": "/posters/Eternals.jpg",
     "desc": "An ancient group of immortals reunites to face the emergence of the Deviants.",
     "cast": "Gemma Chan",
-    "clip": "eternals.mp4"
+    "link": ""
   },
   {
     "id": "hawkeye",
@@ -357,7 +357,7 @@
     "poster": "/posters/Hawkeye.jpg",
     "desc": "Clint Barton trains Kate Bishop while an old enemy resurfaces at Christmas.",
     "cast": "Jeremy Renner",
-    "clip": "hawkeye.mp4"
+    "link": ""
   },
   {
     "id": "spider-man-far-from-home",
@@ -369,7 +369,7 @@
     "poster": "/posters/Spider-Man_Far_From_Home.jpg",
     "desc": "Peter Parker faces Mysterio while grieving Tony Stark on a school trip to Europe.",
     "cast": "Tom Holland",
-    "clip": "spider-man-far-from-home.mp4"
+    "link": ""
   },
   {
     "id": "spider-man-no-way-home",
@@ -381,7 +381,7 @@
     "poster": "/posters/Spider-Man_No_Way_Home.jpg",
     "desc": "A spell gone wrong tears open the multiverse and Peter's secret identity.",
     "cast": "Tom Holland",
-    "clip": "spider-man-no-way-home.mp4"
+    "link": ""
   },
   {
     "id": "moon-knight",
@@ -393,7 +393,7 @@
     "poster": "/posters/Moon_Knight.jpg",
     "desc": "Steven Grant discovers he shares a body with mercenary Marc Spector.",
     "cast": "Oscar Isaac",
-    "clip": "moon-knight.mp4"
+    "link": ""
   },
   {
     "id": "ms-marvel",
@@ -405,7 +405,7 @@
     "poster": "/posters/Ms._Marvel.jpg",
     "desc": "Kamala Khan discovers her powers and becomes her idols' biggest fan turned hero.",
     "cast": "Iman Vellani",
-    "clip": "ms-marvel.mp4"
+    "link": ""
   },
   {
     "id": "doctor-strange-multiverse-of-madness",
@@ -417,7 +417,7 @@
     "poster": "/posters/Doctor_Strange_in_the_Multiverse_of_Madness.jpg",
     "desc": "Strange journeys across realities to protect a girl who can travel between them.",
     "cast": "Benedict Cumberbatch",
-    "clip": "doctor-strange-multiverse-of-madness.mp4"
+    "link": ""
   },
   {
     "id": "thor-love-and-thunder",
@@ -429,7 +429,7 @@
     "poster": "/posters/Thor_Love_and_Thunder.webp",
     "desc": "Thor seeks inner peace but must face Gorr the God Butcher instead.",
     "cast": "Chris Hemsworth",
-    "clip": "thor-love-and-thunder.mp4"
+    "link": ""
   },
   {
     "id": "she-hulk",
@@ -441,7 +441,7 @@
     "poster": "/posters/She-Hulk_Attorney_at_Law.jpg",
     "desc": "Jennifer Walters navigates life and law as a newly-minted Hulk.",
     "cast": "Tatiana Maslany",
-    "clip": "she-hulk.mp4"
+    "link": ""
   },
   {
     "id": "black-panther-wakanda-forever",
@@ -453,7 +453,7 @@
     "poster": "/posters/Black_Panther_Wakanda_Forever.jpg",
     "desc": "Wakanda fights to protect its nation from world powers while mourning T'Challa and confronting Namor's underwater kingdom.",
     "cast": "Letitia Wright",
-    "clip": "wakanda-forever.mp4"
+    "link": ""
   },
   {
     "id": "werewolf-by-night",
@@ -465,7 +465,7 @@
     "poster": "/posters/Werewolf_By_Night.webp",
     "desc": "Monster hunters compete in a deadly contest at a gothic mansion.",
     "cast": "Gael Garc\u00eda Bernal",
-    "clip": "werewolf-by-night.mp4"
+    "link": ""
   },
   {
     "id": "secret-invasion",
@@ -477,7 +477,7 @@
     "poster": "/posters/Secret_Invasion.jpg",
     "desc": "Nick Fury uncovers a shape-shifting Skrull conspiracy on Earth.",
     "cast": "Samuel L. Jackson",
-    "clip": "secret-invasion.mp4"
+    "link": ""
   },
   {
     "id": "ant-man-quantumania",
@@ -489,7 +489,7 @@
     "poster": "/posters/Ant_Man_and_the_Wasp_Quantumania.jpg",
     "desc": "The Lang-van Dyne family is pulled into the Quantum Realm to face Kang.",
     "cast": "Paul Rudd",
-    "clip": "ant-man-quantumania.mp4"
+    "link": ""
   },
   {
     "id": "guardians-vol-3",
@@ -501,7 +501,7 @@
     "poster": "/posters/Guardians_of_the_Galaxy_Vol_3.jpg",
     "desc": "The Guardians risk everything to save Rocket from his dark origins.",
     "cast": "Chris Pratt",
-    "clip": "guardians-3.mp4"
+    "link": ""
   },
   {
     "id": "the-marvels",
@@ -513,7 +513,7 @@
     "poster": "/posters/The_Marvels.jpg",
     "desc": "Carol Danvers, Kamala Khan, and Monica Rambeau swap places when their powers entangle.",
     "cast": "Brie Larson",
-    "clip": "the-marvels.mp4"
+    "link": ""
   },
   {
     "id": "echo",
@@ -525,7 +525,7 @@
     "poster": "/posters/Echo.jpg",
     "desc": "Maya Lopez returns home and confronts her family ties to Kingpin's empire.",
     "cast": "Alaqua Cox",
-    "clip": "echo.mp4"
+    "link": ""
   },
   {
     "id": "agatha-all-along",
@@ -537,7 +537,7 @@
     "poster": "/posters/Agatha_All_Along.jpg",
     "desc": "A stripped-of-power Agatha Harkness walks the Witches' Road for a shot at redemption.",
     "cast": "Kathryn Hahn",
-    "clip": "agatha-all-along.mp4"
+    "link": ""
   },
   {
     "id": "deadpool-and-wolverine",
@@ -549,7 +549,7 @@
     "poster": "/posters/Deadpool_and_Wolverine.webp",
     "desc": "Deadpool drags a reluctant Wolverine variant into a fight to save his universe.",
     "cast": "Ryan Reynolds",
-    "clip": "deadpool-and-wolverine.mp4"
+    "link": ""
   },
   {
     "id": "captain-america-brave-new-world",
@@ -561,7 +561,7 @@
     "poster": "/posters/Captain_America_Brave_New_World.jpg",
     "desc": "Sam Wilson steps fully into the Captain America mantle amid a global crisis.",
     "cast": "Anthony Mackie",
-    "clip": "captain-america-brave-new-world.mp4"
+    "link": ""
   },
   {
     "id": "daredevil-born-again",
@@ -573,7 +573,7 @@
     "poster": "/posters/Daredevil_Born_Again.jpg",
     "desc": "Matt Murdock and Wilson Fisk's paths collide again in New York.",
     "cast": "Charlie Cox",
-    "clip": "daredevil-born-again.mp4"
+    "link": ""
   },
   {
     "id": "ironheart",
@@ -585,7 +585,7 @@
     "poster": "/posters/Ironheart.jpg",
     "desc": "Genius inventor Riri Williams builds her own armored suit and crosses paths with magic.",
     "cast": "Dominique Thorne",
-    "clip": "ironheart.mp4"
+    "link": ""
   },
   {
     "id": "thunderbolts",
@@ -597,7 +597,7 @@
     "poster": "/posters/Thunderbolts.jpg",
     "desc": "A team of morally grey antiheroes is thrown together on a doomed black-ops mission.",
     "cast": "Florence Pugh",
-    "clip": "thunderbolts.mp4"
+    "link": ""
   },
   {
     "id": "fantastic-four-first-steps",
@@ -609,7 +609,7 @@
     "poster": "/posters/Fantastic_Four.jpg",
     "desc": "Marvel's First Family defends their retro-futuristic Earth from Galactus.",
     "cast": "Pedro Pascal",
-    "clip": "fantastic-four-first-steps.mp4"
+    "link": ""
   },
   {
     "id": "wonder-man",
@@ -621,7 +621,7 @@
     "poster": "/posters/Wonder_Man.jpg",
     "desc": "Stuntman Simon Williams gets pulled into the superhero life he's always doubled for.",
     "cast": "Yahya Abdul-Mateen II",
-    "clip": "wonder-man.mp4"
+    "link": ""
   },
   {
     "id": "spider-man-brand-new-day",
@@ -633,7 +633,7 @@
     "poster": "/posters/Spider-Man_Brand_New_Day.jpg",
     "desc": "Peter Parker fights crime full-time in a world that's forgotten him, until a hidden new threat forces a change he can't control.",
     "cast": "Tom Holland",
-    "clip": "spider-man-brand-new-day.mp4"
+    "link": ""
   },
   {
     "id": "avengers-doomsday",
@@ -645,7 +645,7 @@
     "poster": "/posters/Avengers_Doomsday.jpg",
     "desc": "The Avengers face Doctor Doom in a battle that reshapes the multiverse.",
     "cast": "Ensemble",
-    "clip": "doomsday.mp4",
-    "releaseDate": "2026-12-18"
+    "releaseDate": "2026-12-18",
+    "link": ""
   }
 ]
