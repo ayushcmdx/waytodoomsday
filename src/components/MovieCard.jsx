@@ -35,6 +35,11 @@ export default function MovieCard({ item, watched, onToggleWatched, layout = "ti
 
   // Plain external link — set this per-movie in movies.json (e.g. "link": "https://...").
   const downloadUrl = item.link || null;
+  // Optional Play link — set this per-movie in movies.json (e.g. "play": "https://...").
+  // Falls back to the same link as Watch if not set, so Play shows up wherever Watch does.
+  const playUrl = item.play || downloadUrl;
+  // Optional secondary link — set this per-movie in movies.json (e.g. "redirect": "https://...").
+  const redirectUrl = item.redirect || null;
 
   return (
     <motion.div
@@ -137,19 +142,45 @@ export default function MovieCard({ item, watched, onToggleWatched, layout = "ti
           <span className="mt-1 inline-flex items-center gap-1.5 self-start text-[11px] font-bold uppercase tracking-wide px-3 py-2 rounded-full bg-white/10 text-muted border border-white/15">
             ⏳ {timeLeft.days}d {timeLeft.hours}h until release
           </span>
-        ) : downloadUrl ? (
-          <a
-            href={downloadUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-1 inline-flex items-center gap-1.5 self-start text-[11px] font-bold uppercase tracking-wide px-3 py-2 rounded-full bg-accent text-white hover:bg-accent-bright transition-colors"
-          >
-            ▶ Watch
-          </a>
         ) : (
-          <span className="mt-1 inline-flex items-center gap-1.5 self-start text-[11px] font-bold uppercase tracking-wide px-3 py-2 rounded-full bg-white/10 text-muted/60 border border-white/10 cursor-not-allowed">
-            No link yet
-          </span>
+          <div className="mt-1 flex flex-wrap items-center gap-2">
+            {downloadUrl ? (
+              <a
+                href={downloadUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wide px-3 py-2 rounded-full bg-accent text-white hover:bg-accent-bright transition-colors"
+              >
+                ▶ Watch
+              </a>
+            ) : (
+              <span className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wide px-3 py-2 rounded-full bg-white/10 text-muted/60 border border-white/10 cursor-not-allowed">
+                No link yet
+              </span>
+            )}
+
+            {playUrl && (
+              <a
+                href={playUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wide px-3 py-2 rounded-full bg-blue-600 text-white hover:bg-blue-500 transition-colors"
+              >
+                ▶ Redirect
+              </a>
+            )}
+
+            {redirectUrl && (
+              <a
+                href={redirectUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wide px-3 py-2 rounded-full bg-[#01A1F7] text-white hover:bg-[#0DB4EC] transition-colors"
+              >
+                ↗ Redirect
+              </a>
+            )}
+          </div>
         )}
       </div>
     </motion.div>

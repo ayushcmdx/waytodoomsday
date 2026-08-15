@@ -8,6 +8,9 @@ import { useWatched } from "../hooks/useWatched.js";
 
 const VIEW_STORAGE_KEY = "waytodoomsday:view";
 const SORT_STORAGE_KEY = "waytodoomsday:sortMode";
+const BRAVE_DOWNLOAD_URL = "https://brave.com/download/";
+const BRAVE_DOWNLOAD_MOBILE_URL = "https://play.google.com/store/apps/details?id=com.brave.browser&hl=en_US&pli=1";
+
 const FILTERS = [
   { key: "all", label: "All" },
   { key: "movie", label: "Movies" },
@@ -24,6 +27,67 @@ function loadSortMode() {
   if (typeof window === "undefined") return "story";
   const saved = window.localStorage.getItem(SORT_STORAGE_KEY);
   return saved === "story" || saved === "release" ? saved : "story";
+}
+
+function BraveBanner() {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 16 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="max-w-6xl mx-auto px-4 sm:px-6 mb-10"
+    >
+      <div className="relative overflow-hidden rounded-2xl border border-amber-400/30 bg-gradient-to-r from-amber-500/10 via-white/5 to-orange-500/10 backdrop-blur-xl shadow-lg shadow-black/40 px-5 py-5 sm:px-8 sm:py-6 flex flex-col sm:flex-row items-center gap-5 sm:gap-8">
+        <div className="pointer-events-none absolute -top-10 -right-10 w-40 h-40 rounded-full bg-amber-400/20 blur-3xl" />
+        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-400 via-orange-500 to-amber-400" />
+
+        <div className="flex items-center gap-4 flex-1 min-w-0">
+          <div className="shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-white/5 border border-amber-400/30 flex items-center justify-center shadow-lg shadow-amber-400/10 overflow-hidden p-2">
+            <img
+              src="/banner/brave.png"
+              alt="Brave Browser"
+              className="w-full h-full object-contain"
+            />
+          </div>
+
+          <div className="min-w-0">
+            <h3 className="font-display text-sm sm:text-base tracking-wide text-amber-300 uppercase">
+              ⚠ Warning: Ads &amp; Cookie Popups Ahead
+            </h3>
+          
+            <p className="text-xs sm:text-sm text-muted mt-2 leading-relaxed">
+              If you don't want ads and cookies, use Brave Browser — no ads, no cookie trackers,
+              buffering-free clip playback. Highly recommended for this site.
+            </p>
+            <p className="text-xs sm:text-sm text-muted mt-1 leading-relaxed">
+              अगर आपको विज्ञापन और कुकीज़ बिल्कुल नहीं चाहिए, तो Brave Browser इस्तेमाल करें — कोई
+              विज्ञापन नहीं, कोई कुकी ट्रैकर नहीं, बिना बफरिंग के क्लिप प्लेबैक। इस साइट के लिए अत्यधिक अनुशंसित।
+            </p>
+          </div>
+        </div>
+
+        <div className="flex items-center gap-3 shrink-0 w-full sm:w-auto">
+          <a
+            href={BRAVE_DOWNLOAD_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 sm:flex-none text-center text-xs font-bold uppercase tracking-wide px-4 py-2.5 rounded-xl bg-gradient-to-r from-amber-400 to-orange-500 text-black shadow-lg shadow-amber-400/30 hover:brightness-110 active:scale-95 transition"
+          >
+            Download for PC
+          </a>
+          <a
+            href={BRAVE_DOWNLOAD_MOBILE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 sm:flex-none text-center text-xs font-bold uppercase tracking-wide px-4 py-2.5 rounded-xl border border-amber-400/40 text-amber-300 hover:bg-amber-400/10 active:scale-95 transition"
+          >
+            Download for Mobile
+          </a>
+        </div>
+      </div>
+    </motion.div>
+  );
 }
 
 export default function App() {
@@ -165,6 +229,9 @@ export default function App() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 mb-10">
         <ProgressBar watchedCount={watchedCount} total={sorted.length} />
       </div>
+
+      {/* Brave browser banner */}
+      <BraveBanner />
 
       {/* Section heading */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 mb-8">
